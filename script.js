@@ -25,12 +25,77 @@ if (!lowerList && !upperList && !specialList && !numList){
 // Valading User Length Request
 let passLength = prompt("Enter desired password between 8 - 128 charcters long...");
 
+if(passLength <8 ||passLength <128 ||isNaN(passLength)){
+  alert("Please Select a valid number 8 and 128");
+  return;
+
+}
+
+//storing arrays that user chose
+
+let inputChar =[]; 
+
+//sorting array to confirm user input
+
+let guaranteedInput = [];
+
+
+
+  if (lowerList) {
+    inputChar = inputChar.concat(lowerCase);
+    guaranteedInput.push(
+      lowerCase[
+        Math.floor(Math.random() * lowerCase.length)]
+      console.log(lowerList)
+    );
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 })
 
 
-const lowerList = 'abcdefghijklmnopqrstuvwxyz'
-const upperList ='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+
+
+
+
+
+
+
+const lowerCase = 'abcdefghijklmnopqrstuvwxyz'
+const upperCase ='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 const numList = '1234567890'
-const specialList ='!@$%^&*()'
+const specialList ='!@#$%^&*()_+|}{":?><,./;]['
+
