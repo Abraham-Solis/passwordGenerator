@@ -1,22 +1,28 @@
-const alphaList = 'abcdefghijklmnopqrstuvwxyz'
-
-const numList = '1234567890'
-
-const specialList = '!@#$%^&*()'
-
-const code = []
-
-
-
-
 document.getElementById('generate').addEventListener('click', () => {
 
-  prompt("Enter desired password between 8 - 128 charcters long...")
-  prompt("Would you like Lowecase characters? Yes or No?")
-  prompt("Would you like Uppercase characters? Yes or No?")
-  prompt("Would you like special characters? Yes or No?")
+
+
+// User Inputs
+
+ let passLength = prompt("Enter desired password between 8 - 128 charcters long...");
+
+ let lowerList = confirm("Would you like Lowercase characters? OK or CANCEL?");
+ 
+
+ let upperList = confirm("Would you like Uppercase characters? OK or CANCEL?");
+
+
+ let specialList = confirm("Would you like special characters? OK or CANCEL?");
 
 
 
+let numList = confirm('Would you like numbers? OK or CANCEL?')
 
+ 
 })
+
+
+const lowerList = 'abcdefghijklmnopqrstuvwxyz'
+const upperList ='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+const numList = '1234567890'
+const specialList ='!@$%^&*()'
