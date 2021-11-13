@@ -31,56 +31,95 @@ document.getElementById('generate').addEventListener('click', () => {
 
   };
 
+  var choices = ""
+
+  for (var i = 1; i < lowerAlph; i++) {
+    var rand = (lowerAlph[Math.floor(Math.random() * lowerAlph.length)]);
+    choices = choices + lowerAlph.charAt(rand);
+  }
 
 
 
 
-
-
-let inputChar = [];
-
-//sorting array to confirm user input
-
-let guaranteedInput = []; 
-
-
-
-if (lowerCase) {
-  inputChar = inputChar.concat(lowerCase)
-  guaranteedInput.push(lowerCase[Math.floor(Math.random() * lowerCase.length)])
-  console.log(inputChar)
+  if (lowerCase) {
+  choices += lowerAlph
 }
-
-
 
 if (upperCase) {
-  inputChar = inputChar.concat(upperCase)
-  guaranteedInput.push(upperCase[Math.floor(Math.random() * upperCase.length)])
-  console.log(inputChar)
+  choices += upperAlph
+  
 }
-
-if (numList) {
-  inputChar = inputChar.concat(numList)
-  guaranteedInput.push(numList[Math.floor(Math.random() * numList.length)])
-  console.log(inputChar)
-}
-
 if (specialList) {
-  inputChar = inputChar.concat(specialList)
-  guaranteedInput.push(specialList[Math.floor(Math.random() * specialList.length)])
-  console.log(inputChar)
+  choices += symbols
 }
 
+  if (numList) {
+  choices += numerical
+  
+}
+
+
+
+
+
+
+
+  // for (var i = 1; i < lowerAlph; i++) {
+  //   var rand = (lowerAlph[Math.floor(Math.random() * lowerAlph.length)]);
+  //   choices = choices + lowerAlph.charAt(rand);
+  // }
+
+
+
+  console.log(choices)
+
+
+// let inputChar =[];
+
+// //sorting guaranteedInput to confirm user input
+
+// let guaranteedInput = []; 
+
+
+// if (lowerCase) {
+//   inputChar = inputChar.concat(lowerCase)
+//   guaranteedInput.push(lowerCase[Math.floor(Math.random() * lowerCase.length)])
+//   console.log(inputChar)
+// }
+
+
+
+// if (upperCase) {
+//   inputChar = inputChar.concat(upperCase)
+//   guaranteedInput.push(upperCase[Math.floor(Math.random() * upperCase.length)])
+//   console.log(inputChar)
+// }
+
+// if (numList) {
+//   inputChar = inputChar.concat(numList)
+//   guaranteedInput.push(numList[Math.floor(Math.random() * numList.length)])
+//   console.log(inputChar)
+// }
+
+// if (specialList) {
+//   inputChar = inputChar.concat(specialList)
+//   guaranteedInput.push(specialList[Math.floor(Math.random() * specialList.length)])
+//   console.log(inputChar)
+// }
+
+
+//   for (let i = 0; i < inputChar.length; i++) {
+//   const element = inputChar[i];
+
+// }
 
 
 })
 
-console.log(inputChar)
 
-
-const lowerCase = 'abcdefghijklmnopqrstuvwxyz'
-const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-const numList = '1234567890'
-const specialList = '!@#$%^&*()_+|}{":?><,./;]['
+const lowerAlph = 'abcdefghijklmnopqrstuvwxyz'
+const upperAlph = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+const numerical = '1234567890'
+const symbols = '!@#$%^&*()_+|}{":?><,./;]['
 
 
